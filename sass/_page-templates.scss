@@ -5,3 +5,13 @@
 /* All Archives Page */
 
 /* Submit a Quote Page */
+
+/* Footer */
+
+.site-footer {
+  padding: 20px 0;
+
+  @include desktop {
+    padding: 0 20px 0 0;
+  }
+}

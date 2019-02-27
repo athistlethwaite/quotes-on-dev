@@ -338,7 +338,7 @@ body {
 
 blockquote,
 q {
-  quotes: '' ''; }
+  quotes: "" ""; }
   blockquote:before, blockquote:after,
   q:before,
   q:after {
@@ -393,7 +393,7 @@ input[type="submit"] {
   border: 2px solid #0c0;
   border-radius: 3px;
   color: #0c0;
-  font-size: .75rem;
+  font-size: 1rem;
   font-weight: 700;
   line-height: 1;
   padding: .75rem 2.25rem; }
@@ -585,8 +585,28 @@ a {
 /*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+.main-quote {
+  position: relative; }
+  .main-quote::before, .main-quote::after {
+    position: absolute;
+    color: green;
+    font-family: 'FontAwesome';
+    font-size: 125px; }
+  .main-quote::before {
+    content: '\f10d';
+    left: -175px; }
+  .main-quote::after {
+    content: '\f10e';
+    right: -175px; }
+
 body {
   background-color: #222222; }
+
+#page {
+  max-width: 1080px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2.5%; }
 
 /* Posts and pages */
 .sticky {
@@ -611,6 +631,22 @@ body {
   clear: both;
   margin: 0 0 1.5rem; }
 
+.blog .entry-content p,
+.single .entry-content p,
+.archive .entry-content p {
+  font-size: 1.25rem; }
+  @media (min-width: 620px) {
+    .blog .entry-content p,
+    .single .entry-content p,
+    .archive .entry-content p {
+      font-size: 1.75rem; } }
+  @media (min-width: 1080px) {
+    .blog .entry-content p,
+    .single .entry-content p,
+    .archive .entry-content p {
+      font-size: 2.5rem; } }
+
+/* Archives and Search */
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
@@ -633,3 +669,23 @@ object {
 --------------------------------------------------------------*/
 /* All Archives Page */
 /* Submit a Quote Page */
+/* Footer */
+.site-footer {
+  padding: 20px 0; }
+  @media (min-width: 1080px) {
+    .site-footer {
+      padding: 0 20px 0 0; } }
+
+.logo img {
+  display: block;
+  width: 300px; }
+  @media (min-width: 620px) {
+    .logo img {
+      width: 500px; } }
+  @media (min-width: 1080px) {
+    .logo img {
+      width: 700px;
+      margin: 0 auto; } }
+
+.site-header {
+  margin-top: 3rem; }

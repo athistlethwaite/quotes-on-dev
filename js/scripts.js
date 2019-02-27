@@ -6,16 +6,13 @@
     event.preventDefault();
     $.ajax({
       method: 'GET',
-      url: red_vars.rest_url + 'wp/v2/posts?filter[orderby]=rand&filter[posts_per_page]=1',
-      data: {
-        comment_status: 'closed'
-      },
-      beforeSend: function (xhr) {
-        xhr.setRequestHeader('X-WP-Nonce', red_vars.wpapi_nonce);
-      }
+      url: qod_vars.rest_url + 'wp/v2/posts?filter[orderby]=rand&filter[posts_per_page]=1',
+
     }).done(function (response) {
-      //alert('Success! Comments are closed for this post.');
-      console.log(response[0].content.rendered);
+      console.log(response[0]);
+      $('#qod-quotes').html(response[0].content.rendered)
+      $('#author').html(response[0].title.rendered)
+
     });
   });
 })(jQuery);

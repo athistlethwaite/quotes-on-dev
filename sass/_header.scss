@@ -1,0 +1,19 @@
+.logo {
+  img {
+    display: block;
+    width: 300px;
+
+    @include tablet {
+      width: 500px;
+    }
+
+    @include desktop {
+      width: 700px;
+      margin: 0 auto;
+    }
+  }
+}
+
+.site-header {
+  margin-top: $base__space-unit * 2;
+}
