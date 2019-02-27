@@ -31,7 +31,9 @@ get_header(); ?>
 
 		<?php endif; ?>
 
-    <button type="button" id="new-quote-button">Show Me Another!</button>
+		<?php if ( is_home() || is_front_page() ): ?>
+			<button type="button" id="new-quote-btn">Show me Another!</button>
+		<?php endif; ?> 
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
