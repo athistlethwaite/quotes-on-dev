@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all pages.
+ * The template for displaying the about page.
  *
  * @package QOD_Starter_Theme
  */

@@ -2,6 +2,10 @@
 # Content
 --------------------------------------------------------------*/
 
+body {
+	background-color: $color__background-body;
+}
+
 /* Posts and pages */
 
 .sticky {
@@ -12,7 +16,7 @@
 	margin: 0 0 $base__space-unit;
 }
 
-.updated:not(.published){
+.updated:not(.published) {
 	display: none;
 }
 
@@ -31,3 +35,5 @@
 	clear: both;
 	margin: 0 0 $base__space-unit;
 }
+
+// Logo
