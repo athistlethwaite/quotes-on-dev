@@ -14,7 +14,13 @@ get_header(); ?>
 
 				<?php get_template_part( 'template-parts/content', 'page' ); ?>
 
+				<div class="about-info">
+					<p>Quotes on Dev is a project site for the RED Academy Web Developer Professional program. It’s used to experiment with Ajax, WP API, jQuery, and other cool things. 🙂</p>
+					<p>This site is heavily inspired by Chris Coyier’s <a href="http://quotesondesign.com/">Quotes on Design.</a></p>
+				</div>
+
 			<?php endwhile; // End of the loop. ?>
+
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

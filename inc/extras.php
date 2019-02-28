@@ -43,7 +43,7 @@ add_action( 'admin_init', 'qod_remove_comments_meta_boxes' );
 
 
 /**
- * 1 post per page, and in a random order 
+ * Posts per page
  */
 function quotes_on_dev_main ( $query ) {
 	if ( is_admin() || ! $query->is_main_query() )
@@ -52,8 +52,12 @@ function quotes_on_dev_main ( $query ) {
 	if ( is_home() ) {
             $query->set( 'posts_per_page', 1);
             $query->set ( 'orderby', 'rand');
-      return;
+	  return;
 	} 
+
+	if ( is_archive() ) {
+		$query->set ( 'posts_per_page', 5);
+	}
 }
 add_action( 'pre_get_posts', 'quotes_on_dev_main', 1 );
 
@@ -61,7 +65,7 @@ add_action( 'pre_get_posts', 'quotes_on_dev_main', 1 );
  * Enqueue and localize script:
  */ 
 function qod_scripts() {
-    wp_enqueue_style( 'FontAwesome', 'https://use.fontawesome.com/releases/v5.7.2/css/all.css' );
+    wp_enqueue_style( 'font-awesome', 'https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css?ver=4.4.0' );
 
     wp_enqueue_style( 'qod-style', get_stylesheet_uri() );
 

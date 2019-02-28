@@ -1,19 +1,26 @@
-.logo {
+.hero-image {
   img {
     display: block;
     width: 300px;
+    height: 100%;
 
     @include tablet {
       width: 500px;
     }
 
     @include desktop {
-      width: 700px;
       margin: 0 auto;
+      width: 700px;
     }
   }
 }
 
 .site-header {
-  margin-top: $base__space-unit * 2;
+  margin-top: ($base__space-unit * 2);
+}
+
+
+.qod-quotes {
+  margin-top: ($base__space-unit * 2);
+
 }

@@ -7,20 +7,22 @@
 
 ?>
 
-
 	
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
 	<div class="main-quote">
-		
+
 			<header id="qod-quotes" class="entry-content">
 				<?php the_excerpt(); ?>
 			</header><!-- .entry-content -->
 
+
 			<div id="author" class="entry-header">
-				- <?php the_title( ); ?>
+				- <span>
+				 <?php the_title( ); ?> 
+				</span>
 			</div><!-- .entry-header -->
-		
+
 	</div>
 
 </article><!-- #post-## -->
