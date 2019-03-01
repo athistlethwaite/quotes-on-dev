@@ -430,8 +430,7 @@ textarea {
   color: white;
   border: 1px solid #090;
   background-color: #222222;
-  border-radius: 3px;
-  padding: 40px; }
+  border-radius: 3px; }
   input[type="text"]:focus,
   input[type="email"]:focus,
   input[type="url"]:focus,
@@ -731,6 +730,11 @@ object {
 /* All Archives Page */
 .archive .main-quote {
   border-bottom: 1px dashed grey; }
+
+.archive .page-title {
+  border-bottom: 1px dashed grey;
+  margin-top: 3rem;
+  padding-bottom: 1.5rem; }
 
 #author {
   padding: 20px; }

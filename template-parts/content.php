@@ -7,6 +7,7 @@
 
 ?>
 
+<?php $source = get_post_meta( get_the_ID(), _qod_quote_source, true); ?>
 	
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
@@ -18,9 +19,7 @@
 
 
 			<div id="author" class="entry-header">
-				- <span>
-				 <?php the_title( ); ?> 
-				</span>
+				 - <?php the_title( ); ?>, <?php echo $source; ?>
 			</div><!-- .entry-header -->
 
 	</div>

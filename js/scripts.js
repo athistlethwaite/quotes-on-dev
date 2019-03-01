@@ -11,58 +11,55 @@
     }).done(function (response) {
       console.log(response[0]);
       $('#qod-quotes').html(response[0].content.rendered)
-      $('#author span').html(response[0].title.rendered);
+      // $('#author span').html(response[0].title.rendered);
+      let title = "<span>- " + response[0].title.rendered + "</span>";
+      let source = "<span>, " + response[0]._qod_quote_source + "</span>";
+      let source_with_url = `<a target='_blank' class='author-source' href=${response[0]._qod_quote_source_url} > ${response[0]._qod_quote_source}</a>`;
 
       if (response[0]._qod_quote_source_url && response[0]._qod_quote_source) {
-        $('#author').html(`<a target='_blank' class='author-source' 
-        href=${response[0]._qod_quote_source_url} 
-        >, ${response[0]._qod_quote_source}</a>`);
+        $('#author').html(title + source_with_url);
+      } else if (!response[0]._qod_quote_source_url && response[0]._qod_quote_source) {
+        $('#author').html(title + source);
+      } else {
+        $('#author').html(title);
       }
     });
   });
 
   // Submit button
 
-  $('#submit-button').on('submit', function (event) {
+  $('#quote-submission-form').on('submit', function (event) {
     event.preventDefault();
 
     //The variables being listed in AJAX 
-    var $inputs = $('#submit-button :input');
-
-    var values = {};
-    $inputs.each(function () {
-      values[this.author, this.quote, this.quotelocation, this.source] = $(this).val();
-
-    })
-
     var quoteAuthor = $('#quote-author').val();
     var quoteQuote = $('#quote').val();
     var quoteLocation = $('#quote-location').val();
     var quoteSource = $('#quote-source').val();
 
+    console.log(quoteAuthor);
+
     $.ajax({
-      method: 'post',
-      url: qod_vars.rest_url + 'wp/v2/posts/'
-      data: {
-        'title': quoteAuthor,
-        'quote': quoteQuote,
-        '_qod_quote_source': quoteLocation,
-        '_qod_quote_source_url': quoteSource,
+        method: 'post',
+        url: qod_vars.rest_url + 'wp/v2/posts/',
+        data: {
+          'title': quoteAuthor,
+          'quote': quoteQuote,
+          '_qod_quote_source': quoteLocation,
+          '_qod_quote_source_url': quoteSource,
 
+        },
+        beforeSend: function (xhr) {
+          xhr.setRequestHeader('X-WP-Nonce', qod_vars.wpapi_nonce);
+        }
+      })
 
-      },
-      beforeSend: function (xhr) {
-        xhr.setRequestHeader('X-WP-Nonce', qod_vars.wpapi_nonce);
-      }
-    }).done(function (response) {
-      // $('.submit-message').html('Your quote has been submitted. Thank you!');
-      // $('.submit-message').show;
-    }).always(function () {
-      $('.quote-submission').trigger('reset');
-    }).fail(function () {
-      return 'Your quote cannot be processed. Please try again.';
+      .done(function () {
+        //$('.quote-submission').trigger('reset');
+        console.log(qod_vars.success + " is successful ");
 
-    });
+      });
+
   });
 
 })(jQuery);
