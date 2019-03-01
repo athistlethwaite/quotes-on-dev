@@ -18,7 +18,6 @@ get_header(); ?>
 
 			<?php endwhile; // End of the loop. ?>
 
-
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

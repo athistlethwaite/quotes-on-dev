@@ -428,7 +428,7 @@ input[type="password"],
 input[type="search"],
 textarea {
   color: white;
-  border: 1px solid #00cc00;
+  border: 2px solid #00cc00;
   background-color: #222222;
   border-radius: 3px; }
   input[type="text"]:focus,
@@ -814,6 +814,9 @@ object {
   .error-404 .search-button i {
     display: inline;
     margin: 0; }
+
+.search .page-title {
+  border-bottom: 1px dashed white; }
 
 .hero-image {
   padding-bottom: 1.5rem; }

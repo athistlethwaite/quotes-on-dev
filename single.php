@@ -31,7 +31,7 @@ get_header(); ?>
 
 		<?php endif; ?>
 
-		<?php if ( is_home() || is_front_page() || is_single): ?>
+		<?php if ( is_home() || is_front_page() || is_single() ) : ?>
 			<button type="button" id="new-quote-btn">Show me Another!</button>
 		<?php endif; ?> 
 

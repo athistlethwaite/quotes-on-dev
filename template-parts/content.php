@@ -7,8 +7,8 @@
 
 ?>
 
-<?php $source = get_post_meta( get_the_ID(), _qod_quote_source, true); ?>
-<?php $source_url = get_post_meta( get_the_ID(), _qod_quote_source_url, true); ?>
+<?php $source = get_post_meta( get_the_ID(), '_qod_quote_source', true); ?>
+<?php $source_url = get_post_meta( get_the_ID(), '_qod_quote_source_url', true); ?>
 	
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 

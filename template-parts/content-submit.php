@@ -36,7 +36,7 @@
 
 		</form>
 
-		<p class="submit-message" style="display:none;"></p>
+		<p class="submit-message" style="display:none;">Thanks, your quote submission was recieved!</p>
 
 	</div>
 

@@ -76,15 +76,12 @@
       })
 
       .done(function () {
-        $('.submit-message').html('Your quote has been submitted. Thanks!');
-        $('.submit-message').show;
+        $('.submit-message').show();
       }).always(function () {
-        $('#quote-submission-form').trigger('reset');
+        $('#quote-submission-form').slideUp();
       }).fail(function () {
-        return 'Your request cannot be processed – Please try again.';
+        alert('Your submission could not be processed. Please try again.');
       })
-
-
 
   });
 
