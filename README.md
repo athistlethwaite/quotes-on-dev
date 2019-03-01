@@ -2,6 +2,8 @@
 
 A WordPress starter theme for the Quotes on Dev project, forked from Underscores. Allowed us to play with AJAX, PHP, WP API's, and jQuery. This project also allowed us to practice our HTML, CSS, SASS skills.
 
+![QOD Website](..images/screen-shot.png)
+
 
 ## Project Features
 
