@@ -39,6 +39,12 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.com/normalize.css/
 	## All Archives Page
 	## Submit a Quote Page
 --------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Variables
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+# Mixins
+--------------------------------------------------------------*/
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
@@ -368,9 +374,7 @@ dd {
 
 img {
   height: auto;
-  /* Make sure images are scaled correctly. */
-  max-width: 100%;
-  /* Adhere to container width. */ }
+  max-width: 100%; }
 
 table {
   margin: 0 0 1.5rem;
@@ -758,7 +762,6 @@ article {
   margin-top: 0;
   padding: 0; }
 
-/* Make sure embeds and iframes fit their containers. */
 embed,
 iframe,
 object {
@@ -790,7 +793,6 @@ object {
 .source {
   font-size: 1.25rem; }
 
-/* Submit a Quote Page */
 /* Footer */
 .site-footer {
   padding: 20px 0; }
@@ -815,9 +817,13 @@ object {
     display: inline;
     margin: 0; }
 
+/* Search */
 .search .page-title {
   border-bottom: 1px dashed white; }
 
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
 .hero-image {
   padding-bottom: 1.5rem; }
   .hero-image img {
