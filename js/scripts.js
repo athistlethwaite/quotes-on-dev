@@ -1,6 +1,6 @@
-// To get a new quote: 
-
 (function ($) {
+
+  // To generate a new quote: 
   $('#new-quote-btn').on('click', function (event) {
     console.log('clicked');
     event.preventDefault();
@@ -33,18 +33,18 @@
 
     //The variables being listed in AJAX 
     var quoteAuthor = $('#quote-author').val();
-    var quoteQuote = $('#quote').val();
+    var quoteContent = $('#quote-content').val();
     var quoteLocation = $('#quote-location').val();
     var quoteSource = $('#quote-source').val();
 
     console.log(quoteAuthor);
 
     $.ajax({
-        method: 'post',
+        method: 'POST',
         url: qod_vars.rest_url + 'wp/v2/posts/',
         data: {
           'title': quoteAuthor,
-          'quote': quoteQuote,
+          'content': quoteContent,
           '_qod_quote_source': quoteLocation,
           '_qod_quote_source_url': quoteSource,
 
@@ -55,10 +55,13 @@
       })
 
       .done(function () {
-        //$('.quote-submission').trigger('reset');
-        console.log(qod_vars.success + " is successful ");
-
-      });
+        $('.submit-message').html('Your quote has been submitted. Thanks!!');
+        $('.submit-message').show;
+      }).always(function () {
+        $('#quote-submission-form').trigger('reset');
+      }).fail(function () {
+        return 'Your request cannot be processed – Please try again.';
+      })
 
   });
 

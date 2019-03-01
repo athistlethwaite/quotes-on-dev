@@ -18,10 +18,10 @@
 
 		<form id="quote-submission-form"> 
 			<p>Author of Quote </p>
-			<input type="text" name="author" id="quote-author">
+			<input type="text" name="quote-author" id="quote-author">
 			<br>
 			<p>Quote </p>
-			<textarea type="text" name="quote" id="quote"></textarea>
+			<textarea type="text" name="quote-content" id="quote-content"></textarea>
 			<br>
 			<p>Where did you find this quote? (e.g. book name) </p>
 			<input type="text" name="quote-location" id="quote-location">
@@ -33,7 +33,15 @@
 			<input type="submit" value="Submit a Quote">
 
 		</form>
+		<p class="submit-message"></p>
+
 	</div>
+
+<!-- <?php else: ?>
+	<!-- <p> <?php echo sprintf( '<a href="%1s">%2s</a>', esc_url( wp_login_url() ), 'Click her to login.'); ?> </p> -->
+<?php endif; ?> -->
+
+
 
 </article><!-- #post-## -->
 
