@@ -1,6 +1,14 @@
 # Quotes on Dev Starter
 
-A WordPress starter theme for the Quotes on Dev project, forked from Underscores.
+A WordPress starter theme for the Quotes on Dev project, forked from Underscores. Allowed us to play with AJAX, PHP, WP API's, and jQuery. This project also allowed us to practice our HTML, CSS, SASS skills.
+
+
+## Project Features
+
+- This project generates a quote when you click the 'Show me Another!' button without actually refreshing the browser.
+- The Submit a Quote button will submit a new quote into the database to be reviewed and published. 
+- Created 2 custom fields 
+
 
 ## Installation
 

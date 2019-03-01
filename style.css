@@ -776,6 +776,9 @@ object {
   margin-top: 3rem;
   padding-bottom: 1.5rem; }
 
+.search page-title {
+  border-bottom: 1px dashed white; }
+
 #author {
   padding: 20px;
   padding-left: 0;
@@ -801,13 +804,14 @@ object {
   margin: 0;
   padding: 0; }
 
-.error-404 .search-submit {
+.error-404 .search-button {
   padding-left: .75rem;
   padding-right: .75rem;
-  border: none; }
-  .error-404 .search-submit .search-field:active, .error-404 .search-submit .search-field:focus {
+  border: none;
+  display: unset; }
+  .error-404 .search-button .search-field:active, .error-404 .search-button .search-field:focus {
     outline: none; }
-  .error-404 .search-submit i {
+  .error-404 .search-button i {
     display: inline;
     margin: 0; }
 
