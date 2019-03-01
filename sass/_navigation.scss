@@ -37,11 +37,13 @@ a {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	margin: ($base__space-unit * 2);
+	margin: $base__space-unit * 3;
+	margin-left: 0;
 
 	@include tablet {
 		flex-direction: row;
 		justify-content: flex-start;
+
 	}
 
 	@include desktop {
@@ -50,8 +52,8 @@ a {
 
 
 	p {
-		margin: 0;
 		padding: 0;
+		margin: 0;
 	}
 
 

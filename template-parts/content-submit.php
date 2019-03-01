@@ -16,6 +16,8 @@
 
 	<div class="quote-submission">
 
+	<?php if ( is_user_logged_in() && current_user_can( 'edit_posts' ) ) : ?>
+
 		<form id="quote-submission-form"> 
 			<p>Author of Quote </p>
 			<input type="text" name="quote-author" id="quote-author">
@@ -33,15 +35,16 @@
 			<input type="submit" value="Submit a Quote">
 
 		</form>
-		<p class="submit-message"></p>
+
+		<p class="submit-message" style="display:none;"></p>
 
 	</div>
 
-<!-- <?php else: ?>
-	<!-- <p> <?php echo sprintf( '<a href="%1s">%2s</a>', esc_url( wp_login_url() ), 'Click her to login.'); ?> </p> -->
-<?php endif; ?> -->
+<?php else : ?>
+	<p>Sorry, you must be logged in to submit a quote!</p>
 
+	<a href="<?php echo wp_login_url()?>">Click here to login</a>
 
+<?php endif; ?>
 
 </article><!-- #post-## -->
-

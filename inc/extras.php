@@ -78,7 +78,9 @@ function qod_scripts() {
     wp_localize_script( 'qod_quotes', 'qod_vars', array(
 		 'rest_url' => esc_url_raw( rest_url() ),
 		 'wpapi_nonce' => wp_create_nonce( 'wp_rest' ),
-		 'post_id' => get_the_ID()
+		 'home_url' => esc_url_raw( home_url() ),
+		 'success' => 'Thanks, your quote submission was received!',
+		 'failure' => 'Your submission could not be processed',
  ) );
 }
 add_action( 'wp_enqueue_scripts', 'qod_scripts' );

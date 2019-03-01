@@ -1,15 +1,35 @@
 (function ($) {
+  //AJAX-based random post fetching.
 
-  // To generate a new quote: 
+  let lastPage = '';
+
+  //Make back / forward nav work with history API 
+  $(window).on('popstate', function () {
+    window.location.replace(lastPage);
+  })
+
+  // Generate a new quote: 
   $('#new-quote-btn').on('click', function (event) {
-    console.log('clicked');
     event.preventDefault();
+
+    //Store the pre-AJAX request URL for back/forward nav:
+    lastPage = document.URL;
+
+    //AJAX request: 
     $.ajax({
       method: 'GET',
       url: qod_vars.rest_url + 'wp/v2/posts?filter[orderby]=rand&filter[posts_per_page]=1',
 
     }).done(function (response) {
+
+      //To update the URL:
+      quoteSource = response[0].qod_quote_source
+      const url = qod_vars.home_url + '/' + response[0].slug + '/';
+      history.pushState(null, null, url);
+
+      console.log(url);
       console.log(response[0]);
+
       $('#qod-quotes').html(response[0].content.rendered)
       // $('#author span').html(response[0].title.rendered);
       let title = "<span>- " + response[0].title.rendered + "</span>";
@@ -23,6 +43,7 @@
       } else {
         $('#author').html(title);
       }
+
     });
   });
 
@@ -55,13 +76,15 @@
       })
 
       .done(function () {
-        $('.submit-message').html('Your quote has been submitted. Thanks!!');
+        $('.submit-message').html('Your quote has been submitted. Thanks!');
         $('.submit-message').show;
       }).always(function () {
         $('#quote-submission-form').trigger('reset');
       }).fail(function () {
         return 'Your request cannot be processed – Please try again.';
       })
+
+
 
   });
 

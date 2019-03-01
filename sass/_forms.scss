@@ -29,8 +29,9 @@ input[type="submit"] {
 
 	}
 
-	@include tablet {
-		font-size: 1.25rem;
+	@include desktop {
+		margin: 0 auto;
+		text-align: center;
 	}
 }
 

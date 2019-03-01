@@ -6,6 +6,7 @@ $base__space-hentry-margin: 20px;
 // Colors
 
 $color__background-body: #222222;
+$color__brand-color: #00cc00;
 $color__text-main: white;
 
 $color__background-screen: #f1f1f1;
@@ -15,12 +16,13 @@ $color__background-hr: #ccc;
 $color__background-pre: #eee;
 $color__background-ins: #fff9c0;
 $color__border-abbr: #666;
-$border__dashed: 1px dashed grey;
 
-$color__link: #0c0;
-$color__link-visited:#0c0;
+$color__link: #00cc00;
+$color__link-visited: #00cc00;
 $color__link-hover: #090;
 $color__quotes: #0c0;
+
+$border__dashed: 1px dashed white;
 
 // Typography
 
@@ -38,6 +40,5 @@ $font__line-height-body: 1.5;
 $font__line-height-pre: 1.6;
 
 // Breakpoints
-
 $tablet-width: 620px;
 $desktop-width: 1080px;

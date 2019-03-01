@@ -51,8 +51,8 @@
 
 		<?php wp_tag_cloud( array(
 			'unit' 						=> 'rem',
-			'smallest' 				=> 1,
-			'largest' 				=> 1, 
+			'smallest' 				=> 1.25,
+			'largest' 				=> 1.25, 
 		));
 		?>
 

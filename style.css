@@ -412,12 +412,13 @@ input[type="submit"] {
   input[type="submit"]:focus {
     border-color: #0c0;
     color: #090; }
-  @media (min-width: 620px) {
+  @media (min-width: 1080px) {
     button,
     input[type="button"],
     input[type="reset"],
     input[type="submit"] {
-      font-size: 1.25rem; } }
+      margin: 0 auto;
+      text-align: center; } }
 
 /* Show Me Another Quote Button */
 /* Fields */
@@ -463,10 +464,10 @@ textarea {
 --------------------------------------------------------------*/
 /* Links */
 a {
-  color: #0c0;
+  color: #00cc00;
   text-decoration: none; }
   a:visited {
-    color: #0c0; }
+    color: #00cc00; }
   a:hover, a:focus, a:active {
     color: #090; }
   a:focus {
@@ -487,7 +488,8 @@ a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin: 3rem; }
+  margin: 4.5rem;
+  margin-left: 0; }
   @media (min-width: 620px) {
     .main-navigation {
       -webkit-box-orient: horizontal;
@@ -503,8 +505,8 @@ a {
           -ms-flex-pack: end;
               justify-content: flex-end; } }
   .main-navigation p {
-    margin: 0;
-    padding: 0; }
+    padding: 0;
+    margin: 0; }
   .main-navigation ul {
     display: none;
     list-style: none;
@@ -658,9 +660,12 @@ body {
 
 #page {
   max-width: 1080px;
-  width: 95%;
+  width: 90%;
   margin: 0 auto;
   padding: 2.5%; }
+  @media (min-width: 620px) {
+    #page {
+      width: 80%; } }
   @media (min-width: 1080px) {
     #page {
       width: 60%; } }
@@ -673,7 +678,8 @@ article {
   display: block; }
 
 .hentry {
-  margin: 0 0 20px; }
+  margin: 0 0 1.5rem;
+  padding: 0 0 1.5rem; }
 
 .updated:not(.published) {
   display: none; }
@@ -706,7 +712,40 @@ article {
     .archive .entry-content p {
       font-size: 2.5rem; } }
 
+.blog .entry-title,
+.single .entry-title,
+.archive .entry-title {
+  font-size: 1.25rem;
+  display: inline; }
+
+.blog .source,
+.single .source,
+.archive .source {
+  font-style: italic;
+  font-size: 1.25rem; }
+
 /* Archives and Search */
+.post-archives ul,
+.category-archives ul,
+.tag-archives ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none; }
+  .post-archives ul li,
+  .category-archives ul li,
+  .tag-archives ul li {
+    margin-bottom: 0.75rem;
+    margin-right: 0.75rem;
+    font-size: 1rem; }
+    @media (min-width: 620px) {
+      .post-archives ul li,
+      .category-archives ul li,
+      .tag-archives ul li {
+        font-size: 1.25rem; } }
+
 /*--------------------------------------------------------------
 # Media
 --------------------------------------------------------------*/
@@ -727,17 +766,21 @@ object {
 /*--------------------------------------------------------------
 # Page Templates
 --------------------------------------------------------------*/
-/* All Archives Page */
+/* All */
 .archive .main-quote {
-  border-bottom: 1px dashed grey; }
+  border-bottom: 1px dashed white; }
 
 .archive .page-title {
-  border-bottom: 1px dashed grey;
+  border-bottom: 1px dashed white;
   margin-top: 3rem;
   padding-bottom: 1.5rem; }
 
 #author {
-  padding: 20px; }
+  padding: 20px;
+  padding-left: 0; }
+
+.source {
+  font-size: 1.5rem; }
 
 /* Submit a Quote Page */
 /* Footer */
@@ -747,24 +790,23 @@ object {
     .site-footer {
       padding: 0 20px 0 0; } }
 
-.hero-image img {
-  display: block;
-  width: 300px;
-  height: 100%; }
-  @media (min-width: 620px) {
-    .hero-image img {
-      width: 500px; } }
-  @media (min-width: 1080px) {
-    .hero-image img {
-      margin: 0 auto;
-      width: 700px; } }
+/* 404 Page */
+.hero-image {
+  padding-bottom: 1.5rem; }
+  .hero-image img {
+    display: block;
+    width: 300px;
+    height: 100%; }
+    @media (min-width: 620px) {
+      .hero-image img {
+        width: 500px; } }
+    @media (min-width: 1080px) {
+      .hero-image img {
+        margin: 0 auto;
+        width: 700px; } }
 
 .site-header {
   margin-top: 3rem; }
 
 .qod-quotes {
   margin-top: 3rem; }
-
-/*--------------------------------------------------------------
-# Footer
---------------------------------------------------------------*/

@@ -46,10 +46,14 @@ body {
 
 #page {
 	max-width: 1080px;
-	width: 95%;
+	width: 90%;
 	margin: 0 auto;
 	padding: 2.5%;
 
+
+	@include tablet {
+		width: 80%
+	}
 
 	@include desktop {
 		width: 60%;
@@ -67,8 +71,8 @@ article {
 }
 
 .hentry {
-	margin: 0 0 $base__space-hentry-margin;
-
+	margin: 0 0 $base__space-unit;
+	padding: 0 0 $base__space-unit;
 }
 
 .updated:not(.published) {
@@ -107,6 +111,37 @@ article {
 			}
 		}
 	}
+
+	.entry-title {
+		font-size: 1.25rem;
+		display: inline;
+	}
+
+	.source {
+		font-style: italic;
+		font-size: 1.25rem;
+
+	}
 }
 
 /* Archives and Search */
+
+.post-archives,
+.category-archives,
+.tag-archives {
+	ul {
+		display: flex;
+		flex-wrap: wrap;
+		list-style: none;
+
+		li {
+			margin-bottom: $base__space-unit / 2;
+			margin-right: $base__space-unit * .5;
+			font-size: 1rem;
+
+			@include tablet {
+				font-size: 1.25rem;
+			}
+		}
+	}
+}
