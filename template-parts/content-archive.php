@@ -53,6 +53,8 @@
 			'unit' 						=> 'rem',
 			'smallest' 				=> 1.25,
 			'largest' 				=> 1.25, 
+			'format'					=> 'list',
+			
 		));
 		?>
 

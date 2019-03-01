@@ -61,7 +61,7 @@ body {
 }
 
 article {
-	margin: 40px;
+	margin-bottom: 20px;
 }
 
 /* Posts and pages */
@@ -70,10 +70,6 @@ article {
 	display: block;
 }
 
-.hentry {
-	margin: 0 0 $base__space-unit;
-	padding: 0 0 $base__space-unit;
-}
 
 .updated:not(.published) {
 	display: none;
@@ -129,19 +125,18 @@ article {
 .post-archives,
 .category-archives,
 .tag-archives {
+
 	ul {
 		display: flex;
 		flex-wrap: wrap;
 		list-style: none;
+		margin-left: 0;
+		padding-left: 0;
 
 		li {
 			margin-bottom: $base__space-unit / 2;
 			margin-right: $base__space-unit * .5;
-			font-size: 1rem;
-
-			@include tablet {
-				font-size: 1.25rem;
-			}
+			font-size: 1.25rem;
 		}
 	}
 }
