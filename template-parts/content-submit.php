@@ -31,8 +31,8 @@
 			<p>Provide the URL of the quote source, if available </p>
 			<input type="url" name="url" id="quote-source">
 			<br>
-			<!-- <button type="submit" id="submit-button">Submit a Quote</button> -->
-			<input type="submit" value="Submit a Quote">
+			<br>
+			<input type="submit" value="Submit a Quote" class="submit-a-quote">
 
 		</form>
 
