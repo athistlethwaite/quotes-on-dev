@@ -58,8 +58,6 @@
     var quoteLocation = $('#quote-location').val();
     var quoteSource = $('#quote-source').val();
 
-    console.log(quoteAuthor);
-
     $.ajax({
         method: 'POST',
         url: qod_vars.rest_url + 'wp/v2/posts/',

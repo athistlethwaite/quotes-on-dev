@@ -23,7 +23,7 @@
 			<input type="text" name="quote-author" id="quote-author">
 			<br>
 			<p>Quote </p>
-			<textarea type="text" name="quote-content" id="quote-content"></textarea>
+			<textarea name="quote-content" id="quote-content"></textarea>
 			<br>
 			<p>Where did you find this quote? (e.g. book name) </p>
 			<input type="text" name="quote-location" id="quote-location">
