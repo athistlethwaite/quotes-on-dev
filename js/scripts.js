@@ -24,7 +24,7 @@
 
       //To update the URL:
       quoteSource = response[0].qod_quote_source
-      const url = qod_vars.home_url + '/' + response[0].slug + '/';
+      let url = qod_vars.home_url + '/' + response[0].slug + '/';
       history.pushState(null, null, url);
 
       console.log(url);
@@ -32,9 +32,9 @@
 
       $('#qod-quotes').html(response[0].content.rendered)
       // $('#author span').html(response[0].title.rendered);
-      let title = "<span>- " + response[0].title.rendered + "</span>";
-      let source = "<span>, " + response[0]._qod_quote_source + "</span>";
-      let source_with_url = `<a target='_blank' class='author-source' href=${response[0]._qod_quote_source_url} > ${response[0]._qod_quote_source}</a>`;
+      const title = "<span>- " + response[0].title.rendered + "</span>";
+      const source = "<span>, " + response[0]._qod_quote_source + "</span>";
+      const source_with_url = `<a target='_blank' class='author-source' href=${response[0]._qod_quote_source_url} > ${response[0]._qod_quote_source}</a>`;
 
       if (response[0]._qod_quote_source_url && response[0]._qod_quote_source) {
         $('#author').html(title + source_with_url);
@@ -53,10 +53,10 @@
     event.preventDefault();
 
     //The variables being listed in AJAX 
-    var quoteAuthor = $('#quote-author').val();
-    var quoteContent = $('#quote-content').val();
-    var quoteLocation = $('#quote-location').val();
-    var quoteSource = $('#quote-source').val();
+    const quoteAuthor = $('#quote-author').val();
+    const quoteContent = $('#quote-content').val();
+    const quoteLocation = $('#quote-location').val();
+    const quoteSource = $('#quote-source').val();
 
     $.ajax({
         method: 'POST',
